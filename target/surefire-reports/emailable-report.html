@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">RestAssuredSuite</th></tr>
+<tr><td><a href="#t0">ApiTests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">3,704</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">RestAssuredSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ApiTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.bmg360.apiautomation.apitest.ApiTests</td><td><a href="#m0">test_GET_record</a></td><td rowspan="1">1726720444181</td><td rowspan="1">336</td></tr><tr><th colspan="4">ApiTests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.bmg360.apiautomation.apitest.ApiTests</td><td><a href="#m1">test_GET_calldetails_perday</a></td><td rowspan="1">1726720440862</td><td rowspan="1">2891</td></tr><tr class="passedeven"><td><a href="#m2">test_GET_concurrentcalls</a></td><td rowspan="1">1726720443854</td><td rowspan="1">325</td></tr></tbody>
+</table>
+<h2>ApiTests</h2><h3 id="m0">com.bmg360.apiautomation.apitest.ApiTests#test_GET_record</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 2 expectations failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+
+Expected content-type &quot;application/json&quot; doesn&apos;t match actual content-type &quot;text/html; charset=UTF-8&quot;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at com.bmg360.apiautomation.api.BaseTest.getWithOutQueryParameters(BaseTest.java:57)
+	at com.bmg360.apiautomation.apitest.ApiTests.test_GET_record(ApiTests.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.bmg360.apiautomation.apitest.ApiTests#test_GET_calldetails_perday</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.bmg360.apiautomation.apitest.ApiTests#test_GET_concurrentcalls</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
