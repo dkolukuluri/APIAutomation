@@ -8,7 +8,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.ThreadLocalRandom;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -55,9 +61,72 @@ public class Utilities {
 				return size;
 		    }
 		
-		
-		
-	}
+				    
+	    public static int GenerateRandomNumbers() {
+
+		        Random rand;
+		        rand = new Random();
+		            int randInt = rand.nextInt(50) + 1;
+
+		            
+		            return randInt;
+		        }
+	    
+	 // Method to validate JSON response using JSONPath
+	    public static List<String> getlistofids(String jsonResponse, String key) {
+	        // Use RestAssured's JsonPath to extract value based on jsonPath
+	       //Object actualValue = JsonPath.from(jsonResponse).get(jsonPath);
+	    	
+	    	List<String> ids = new ArrayList<String>();
+	    	 
+	    	JSONArray jsonArray = new JSONArray(jsonResponse);
+	    	
+	    	int arraySize = jsonArray.length();
+	    	for (int i = 0 ; i < arraySize; i++)
+	    	{     
+	    	// Step 3: Get the first JSONObject from the array
+	    	JSONObject firstObject = jsonArray.getJSONObject(i);       
+	    	// Step 4: Retrieve the "test_id" from the first 
+	    	Object firstTestId = firstObject.get(key);
+	        ids.add(firstTestId.toString());
+	        System.out.println("actual value : " + firstTestId.toString());
+	    	}
+	    	System.out.println("list of ids : " + ids);
+	    	// Return whether the actual value matches the expected value
+	        return ids;
+	    }
+
+	    
+	    public static HashMap<String,List<String>> gethashmapofids(String jsonResponse, String key, String value) {
+	    	List<String> ids = new ArrayList<String>();
+	    	 
+	    	JSONArray jsonArray = new JSONArray(jsonResponse);
+	    	
+	    	HashMap<String,List<String>> idsmap = new HashMap<String,List<String>>();
+	    	 
+	    	
+	    	int arraySize = jsonArray.length();
+	    	for (int i = 0 ; i < arraySize; i++)
+	    	{     
+	    	// Step 3: Get the first JSONObject from the array
+	    	JSONObject firstObject = jsonArray.getJSONObject(i);       
+	    	// Step 4: Retrieve the "test_id" from the first 
+	    	Object team_id = firstObject.get(key);
+	    	Object user_id = firstObject.get(value);
+	        idsmap.put(team_id, user_id);
+	        System.out.println("actual value : " + firstTestId.toString());
+	    	}
+	    	System.out.println("list of ids : " + ids);
+	    	// Return whether the actual value matches the expected value
+	        return idsmap;
+	    }
+	    
+	    
+	    
+	    
+	    
+		    }    
+		    
 
 	
 

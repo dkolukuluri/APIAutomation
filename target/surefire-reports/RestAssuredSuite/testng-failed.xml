@@ -6,6 +6,8 @@
       <class name="com.bmg360.apiautomation.apitest.ApiTests">
         <methods>
           <include name="test_GET_record"/>
+          <include name="test_GET_calldetails"/>
+          <include name="test_GET_client_details"/>
         </methods>
       </class> <!-- com.bmg360.apiautomation.apitest.ApiTests -->
     </classes>
