@@ -3,11 +3,11 @@ package com.bmg360.apiautomation.apiendpoints;
 public class Routes {
 	
 	
-	public static String base_url ="https://impact.2nd.co";
+	public static String base_url ="https://impact-staging.2nd.co";
 	
 	// Pre-transfer Management Post method
 	
-	public static String pretransfer_post_url = "/api/pretranfer";
+	public static String pretransfer_post_url = "/api/pretransfer";
 	
 	// Post transfer Management Post Method
 	public static String posttransfer_post_url = "/api/posttransfer";
@@ -73,7 +73,7 @@ public class Routes {
 	
 	
 	//Team Management 
-	public static String teammanagement_get_url = "/api/team{team}/user{user}"; 
+	public static String teammanagement_get_url = "/api/team/{team}/user/{user}"; 
 	  
 	public static String teammanagement_post_url = "/api/team{team}/clients"; 
 	
