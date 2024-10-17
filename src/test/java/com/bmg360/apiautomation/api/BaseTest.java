@@ -10,12 +10,19 @@ import static org.hamcrest.Matchers.*;
 
 import java.util.Map;
 
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import api.utilities.Apienvironment;
 import api.utilities.ConfigManager;
+import api.utilities.EmailSender;
 
 public class BaseTest {
 
 	protected RequestSpecification requestSpec;
 	protected ResponseSpecification responseSpec;
+	
+	Apienvironment objectapienvironment = new Apienvironment();
 	
 
 	public BaseTest() {
@@ -49,6 +56,25 @@ public class BaseTest {
 		System.out.println("url :" + endpoint);
 		return RestAssured.given().spec(requestSpec).body(jsonPayload).when().post(endpoint).then() .extract().response();
 		}
+	
+	@BeforeSuite
+	public void setupEnvironment() {
+		String env = System.getProperty("environment", "staging");
+		System.out.println("Environment in before suite :" + env);
+
+		// Generate the environment.properties file dynamically
+		objectapienvironment.createEnvironmentFile(env);
+	}
+	
+
+	    @AfterSuite
+	    public void sendAllureReportViaEmail() {
+	    	System.out.println("Sending email");
+
+	        EmailSender emailSender = new EmailSender();
+	        emailSender.sendEmailWithReport(); // Call the method to send the email
+	    }
+	
 	}
 		
 

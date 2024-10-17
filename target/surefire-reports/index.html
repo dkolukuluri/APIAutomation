@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-RestAssuredSuite" class="navigator-link">
-              <span class="suite-name border-failed">RestAssuredSuite</span>
+              <span class="suite-name border-passed">RestAssuredSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,31 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods, 3 failed,   6 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-RestAssuredSuite" class="hide-methods failed suite-RestAssuredSuite"> (hide)</a> <!-- hide-methods failed suite-RestAssuredSuite -->
-                      <a href="#" panel-name="suite-RestAssuredSuite" class="show-methods failed suite-RestAssuredSuite"> (show)</a> <!-- show-methods failed suite-RestAssuredSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-RestAssuredSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RestAssuredSuite" title="com.bmg360.apiautomation.apitest.ApiTests" class="method navigator-link" hash-for-method="test_GET_calldetails">test_GET_calldetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RestAssuredSuite" title="com.bmg360.apiautomation.apitest.ApiTests" class="method navigator-link" hash-for-method="test_GET_client_details">test_GET_client_details</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RestAssuredSuite" title="com.bmg360.apiautomation.apitest.ApiTests" class="method navigator-link" hash-for-method="test_GET_record">test_GET_record</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-RestAssuredSuite -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -125,31 +101,6 @@
                       <a href="#" panel-name="suite-RestAssuredSuite" class="show-methods passed suite-RestAssuredSuite"> (show)</a> <!-- show-methods passed suite-RestAssuredSuite -->
                     </span>
                     <div class="method-list-content passed suite-RestAssuredSuite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RestAssuredSuite" title="com.bmg360.apiautomation.apitest.ApiTests" class="method navigator-link" hash-for-method="test_GET_calldetails_perday">test_GET_calldetails_perday</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RestAssuredSuite" title="com.bmg360.apiautomation.apitest.ApiTests" class="method navigator-link" hash-for-method="test_GET_client">test_GET_client</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RestAssuredSuite" title="com.bmg360.apiautomation.apitest.ApiTests" class="method navigator-link" hash-for-method="test_GET_concurrentcallers">test_GET_concurrentcallers</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RestAssuredSuite" title="com.bmg360.apiautomation.apitest.ApiTests" class="method navigator-link" hash-for-method="test_GET_concurrentcalls">test_GET_concurrentcalls</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RestAssuredSuite" title="com.bmg360.apiautomation.apitest.ApiTests" class="method navigator-link" hash-for-method="test_GET_user">test_GET_user</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-RestAssuredSuite" title="com.bmg360.apiautomation.apitest.ApiTests" class="method navigator-link" hash-for-method="test_GET_user_id_team_id">test_GET_user_id_team_id</a> <!-- method navigator-link -->
@@ -167,129 +118,12 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-RestAssuredSuite" class="panel RestAssuredSuite">
-          <div class="suite-RestAssuredSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.bmg360.apiautomation.apitest.ApiTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_GET_calldetails">
-                  </a> <!-- test_GET_calldetails -->
-                  <span class="method-name">test_GET_calldetails</span>
-                  <div class="stack-trace">java.lang.AssertionError: 2 expectations failed.
-Expected status code &lt;200&gt; but was &lt;500&gt;.
-
-Expected content-type &quot;application/json&quot; doesn&apos;t match actual content-type &quot;text/html; charset=UTF-8&quot;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
-	at com.bmg360.apiautomation.api.BaseTest.getWithOutQueryParameters(BaseTest.java:57)
-	at com.bmg360.apiautomation.apitest.ApiTests.test_GET_calldetails(ApiTests.java:68)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_GET_client_details">
-                  </a> <!-- test_GET_client_details -->
-                  <span class="method-name">test_GET_client_details</span>
-                  <div class="stack-trace">java.lang.AssertionError: 2 expectations failed.
-Expected status code &lt;200&gt; but was &lt;404&gt;.
-
-Expected content-type &quot;application/json&quot; doesn&apos;t match actual content-type &quot;text/html; charset=UTF-8&quot;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
-	at com.bmg360.apiautomation.api.BaseTest.getWithOutQueryParameters(BaseTest.java:57)
-	at com.bmg360.apiautomation.apitest.ApiTests.test_GET_client_details(ApiTests.java:166)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_GET_record">
-                  </a> <!-- test_GET_record -->
-                  <span class="method-name">test_GET_record</span>
-                  <div class="stack-trace">java.lang.AssertionError: 2 expectations failed.
-Expected status code &lt;200&gt; but was &lt;401&gt;.
-
-Expected content-type &quot;application/json&quot; doesn&apos;t match actual content-type &quot;text/html; charset=UTF-8&quot;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
-	at com.bmg360.apiautomation.api.BaseTest.getWithOutQueryParameters(BaseTest.java:57)
-	at com.bmg360.apiautomation.apitest.ApiTests.test_GET_record(ApiTests.java:57)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-RestAssuredSuite-class-failed -->
           <div class="suite-RestAssuredSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.bmg360.apiautomation.apitest.ApiTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_GET_calldetails_perday">
-                  </a> <!-- test_GET_calldetails_perday -->
-                  <span class="method-name">test_GET_calldetails_perday</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_GET_client">
-                  </a> <!-- test_GET_client -->
-                  <span class="method-name">test_GET_client</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_GET_concurrentcallers">
-                  </a> <!-- test_GET_concurrentcallers -->
-                  <span class="method-name">test_GET_concurrentcallers</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_GET_concurrentcalls">
-                  </a> <!-- test_GET_concurrentcalls -->
-                  <span class="method-name">test_GET_concurrentcalls</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_GET_user">
-                  </a> <!-- test_GET_user -->
-                  <span class="method-name">test_GET_user</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="test_GET_user_id_team_id">
@@ -351,48 +185,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test_GET_calldetails')
+data.setCell(0, 1, 'test_GET_user_id_team_id')
 data.setCell(0, 2, 'com.bmg360.apiautomation.apitest.ApiTests')
-data.setCell(0, 3, 17533);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'test_GET_calldetails_perday')
-data.setCell(1, 2, 'com.bmg360.apiautomation.apitest.ApiTests')
-data.setCell(1, 3, 1374);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'test_GET_concurrentcallers')
-data.setCell(2, 2, 'com.bmg360.apiautomation.apitest.ApiTests')
-data.setCell(2, 3, 1136);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'test_GET_user_id_team_id')
-data.setCell(3, 2, 'com.bmg360.apiautomation.apitest.ApiTests')
-data.setCell(3, 3, 719);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'test_GET_client')
-data.setCell(4, 2, 'com.bmg360.apiautomation.apitest.ApiTests')
-data.setCell(4, 3, 359);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'test_GET_client_details')
-data.setCell(5, 2, 'com.bmg360.apiautomation.apitest.ApiTests')
-data.setCell(5, 3, 330);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'test_GET_user')
-data.setCell(6, 2, 'com.bmg360.apiautomation.apitest.ApiTests')
-data.setCell(6, 3, 303);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'test_GET_concurrentcalls')
-data.setCell(7, 2, 'com.bmg360.apiautomation.apitest.ApiTests')
-data.setCell(7, 3, 300);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'test_GET_record')
-data.setCell(8, 2, 'com.bmg360.apiautomation.apitest.ApiTests')
-data.setCell(8, 3, 288);
+data.setCell(0, 3, 5114);
 window.suiteTableData['RestAssuredSuite']= { tableData: data, tableDiv: 'times-div-RestAssuredSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-RestAssuredSuite">
               </div> <!-- times-div-RestAssuredSuite -->
             </div> <!-- times-div -->
@@ -419,48 +221,18 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.bmg360.apiautomation.apitest.ApiTests</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">test_GET_calldetails</span>
+              <div class="configuration-suite before">
+                <span class="method-name">setupEnvironment</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">test_GET_calldetails_perday</span>
-                <span class="method-start">17612 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">test_GET_client</span>
-                <span class="method-start">18991 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">test_GET_client_details</span>
-                <span class="method-start">19353 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">test_GET_concurrentcallers</span>
-                <span class="method-start">19686 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">test_GET_concurrentcalls</span>
-                <span class="method-start">20826 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">test_GET_record</span>
-                <span class="method-start">21129 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">test_GET_user</span>
-                <span class="method-start">21421 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">test_GET_user_id_team_id</span>
-                <span class="method-start">21727 ms</span>
+                <span class="method-start">57 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">sendAllureReportViaEmail</span>
+                <span class="method-start">5268 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
