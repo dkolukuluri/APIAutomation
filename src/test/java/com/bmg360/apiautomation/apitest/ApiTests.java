@@ -41,254 +41,134 @@ public class ApiTests extends BaseTest {
 	Utilities utils = new Utilities();
 	SoftAssert softAssert = new SoftAssert();
 
-	@Epic("BMG360 API Validations")
-	@Feature("API Validations")
-	@Story("Get Concurrent calls")
-	@Severity(SeverityLevel.NORMAL)
+	@Epic("API Health Check - Staging Environment")
+	@Feature("API Health Check")
+	@Story("API Health Check")
+	@Severity(SeverityLevel.CRITICAL)
+
 
 	
-	/*
-	 * @Test
-	 * 
-	 * public void test_GET_concurrentcalls() {
-	 * 
-	 * Response response = getWithOutQueryParameters(Routes.concurrency_get_url);
-	 * 
-	 * String statuscode = String.valueOf(response.getStatusCode());
-	 * System.out.println("Response from  : " + Routes.concurrency_get_url + ":" +
-	 * statuscode); System.out.println("Response from  : " +
-	 * Routes.concurrency_get_url + ":" + response.asString());
-	 * Assert.assertEquals(statuscode, "200"); }
-	 * 
-	 * @Test public void test_GET_record() {
-	 * 
-	 * Response response = getWithOutQueryParameters(Routes.datarecording_get_url);
-	 * 
-	 * String statuscode = String.valueOf(response.getStatusCode());
-	 * System.out.println("Response from  : " + Routes.datarecording_get_url + ":" +
-	 * statuscode); System.out.println("Response from  : " +
-	 * Routes.datarecording_get_url + ":" + response.asString());
-	 * Assert.assertEquals(statuscode, "401"); }
-	 * 
-	 * @Test public void test_GET_calldetails() {
-	 * 
-	 * Response response = getWithOutQueryParameters(Routes.calldetails_get_url);
-	 * 
-	 * String statuscode = String.valueOf(response.getStatusCode());
-	 * System.out.println("Response from  : " + Routes.calldetails_get_url + ":" +
-	 * statuscode); System.out.println("Response from  : " +
-	 * Routes.calldetails_get_url + ":" + response.asString());
-	 * Assert.assertEquals(statuscode, "200"); }
-	 * 
-	 * @Test public void test_GET_user() {
-	 * 
-	 * Response response = getWithOutQueryParameters(Routes.user_get_url);
-	 * 
-	 * String statuscode = String.valueOf(response.getStatusCode());
-	 * System.out.println("Response from  : " + Routes.user_get_url + ":" +
-	 * statuscode); System.out.println("Response from  : " + Routes.user_get_url +
-	 * ":" + response.asString()); Assert.assertEquals(statuscode, "200"); }
-	 * 
-	 * @Test public void test_GET_client() {
-	 * 
-	 * Response response = getWithOutQueryParameters(Routes.client_get_url);
-	 * 
-	 * String statuscode = String.valueOf(response.getStatusCode());
-	 * System.out.println("Response from  : " + Routes.client_get_url + ":" +
-	 * statuscode); System.out.println("Response from  : " + Routes.client_get_url +
-	 * ":" + response.asString()); Assert.assertEquals(statuscode, "200"); }
-	 * 
-	 * @Test public void test_GET_calldetails_perday() {
-	 * 
-	 * String randomdate = Utilities.getRandomDate();
-	 * System.out.println("Random date :" + randomdate);
-	 * 
-	 * String result = Routes.calldetail_get_url.replace("{calldetail}",
-	 * randomdate.toString()); Response response =
-	 * getWithOutQueryParameters(result);
-	 * 
-	 * String statuscode = String.valueOf(response.getStatusCode());
-	 * 
-	 * System.out.println("Response from  : " + Routes.calldetail_get_url + ":" +
-	 * statuscode); System.out.println("Response from  : " +
-	 * Routes.calldetail_get_url + ":" + response.asString());
-	 * 
-	 * System.out.println("Size of the array : " +
-	 * Utilities.getArraySize(response)); Assert.assertEquals(statuscode, "200"); }
-	 * 
-	 * @Test public void test_GET_concurrentcallers() {
-	 * 
-	 * int randomnumber = Utilities.GenerateRandomNumbers();
-	 * System.out.println("Random integer: " + randomnumber);
-	 * 
-	 * String str = Integer.toString(randomnumber);
-	 * 
-	 * String result =
-	 * Routes.concurrencycaller_get_url.replace("{concurrentcaller}", str); Response
-	 * response = getWithOutQueryParameters(result);
-	 * 
-	 * String statuscode = String.valueOf(response.getStatusCode());
-	 * System.out.println("Response from  : " + Routes.concurrencycaller_get_url +
-	 * ":" + statuscode); System.out.println("Response from  : " +
-	 * Routes.concurrencycaller_get_url + ":" + response.asString());
-	 * 
-	 * Assert.assertEquals(statuscode, "502"); }
-	 * 
-	 * @Test public void test_GET_transactions() throws Exception {
-	 * 
-	 * String query =
-	 * "select id, payable_type, payable_id, wallet_id, type, amount, case when confirmed =1 then 'true' else 'false' end confirmed, meta, uuid, created_at, updated_at from vapor.transactions where payable_id = 31;"
-	 * ; String resultfromdb = dbutils.getresult_fromdb(query);
-	 * utils.getlistofids(resultfromdb, "payable_id");
-	 * 
-	 * }
-	 */
-
-	
-	  @Test public void test_GET_user_id_team_id() throws Exception {
-	  HashMap<String, List<String>> teamUserMap = new HashMap<>(); String query =
-	  "select team_id, user_id from vapor.team_user where user_id  in (select user_id from vapor.teams) order  by team_id, user_id;"
-	  ; String resultfromdb = dbutils.getresult_fromdb(query); teamUserMap =
-	  utils.gethashmapofids(resultfromdb, "user_id", "team_id");
+	  @Test
 	  
-	  for (String teamId : teamUserMap.keySet()) { List<String> userIds =
-	  teamUserMap.get(teamId); for (String userId : userIds) {
-	  System.out.println(" User ID: " + userId); String result =
-	  Routes.teammanagement_get_url.replace("{team}", teamId).replace("{user}",
-	  userId); System.out.println("url :" + result);
+	  public void test_GET_concurrentcalls() {	  
+	  Response response = getWithOutQueryParameters(Routes.concurrency_get_url);	  
+	  String statuscode = String.valueOf(response.getStatusCode());
+	  Assert.assertEquals(statuscode, "200"); }
 	  
-	  Response response = getWithOutQueryParameters(result); String statuscode =
-	  String.valueOf(response.getStatusCode());
-	  System.out.println("Response from  : " + result + ":" + statuscode);
-	  System.out.println("Response from  : " + result + ":" + response.asString());
+	  @Test public void test_GET_record() {	  
+	  Response response = getWithOutQueryParameters(Routes.datarecording_get_url);	  
+	  String statuscode = String.valueOf(response.getStatusCode());
+	  Assert.assertEquals(statuscode, "401"); }
 	  
-	  //softAssert.assertEquals(statuscode, "200");
-	  softAssert.assertTrue(statuscode.equals("200") || statuscode.equals("500"));
+	    
+	  @Test public void test_GET_user() {	  
+	  Response response = getWithOutQueryParameters(Routes.user_get_url);	  
+	  String statuscode = String.valueOf(response.getStatusCode());
+	  Assert.assertEquals(statuscode, "200"); }
 	  
-	  }
+	  @Test public void test_GET_client() {	  
+	  Response response = getWithOutQueryParameters(Routes.client_get_url);
+	  String statuscode = String.valueOf(response.getStatusCode());
+	  Assert.assertEquals(statuscode, "200"); }
 	  
-	  } softAssert.assertAll();
+	  @Test public void test_GET_calldetails_perday() {	  
+	  String randomdate = Utilities.getRandomDate();
+	  String result = Routes.calldetail_get_url.replace("{calldetail}", randomdate.toString()); 
+	  Response response = getWithOutQueryParameters(result);	  
+	  String statuscode = String.valueOf(response.getStatusCode());
+	  Assert.assertEquals(statuscode, "200"); }
 	  
+	  @Test public void test_GET_concurrentcallers() {	  
+	  int randomnumber = Utilities.GenerateRandomNumbers();
+	  System.out.println("Random integer: " + randomnumber);	  
+	  String str = Integer.toString(randomnumber);	  
+	  String result = Routes.concurrencycaller_get_url.replace("{concurrentcaller}", str); 
+	  Response response = getWithOutQueryParameters(result);	  
+	  String statuscode = String.valueOf(response.getStatusCode());
+	  Assert.assertEquals(statuscode, "200"); }
+	  
+	  @Test public void test_GET_transactions() {		  
+		  int randomnumber = Utilities.GenerateRandomNumbers();
+		  String str = Integer.toString(randomnumber);	  
+		  String result = Routes.transactions_get_url.replace("{transaction}", str); 
+		  Response response = getWithOutQueryParameters(result);	  
+		  String statuscode = String.valueOf(response.getStatusCode());
+		  Assert.assertEquals(statuscode, "200"); 
 	  }
 	 
-
-		/*
-		 * @Test public void test_GET_client_details() throws Exception {
-		 * 
-		 * int randomnumber = Utilities.GenerateRandomNumbers();
-		 * System.out.println("Random integer: " + randomnumber);
-		 * 
-		 * String str = Integer.toString(randomnumber);
-		 * 
-		 * String result = Routes.clientdetails_get_url.replace("{client}", str);
-		 * Response response = getWithOutQueryParameters(result);
-		 * 
-		 * String statuscode = String.valueOf(response.getStatusCode());
-		 * System.out.println("Response from  : " + Routes.clientdetails_get_url + ":" +
-		 * statuscode); System.out.println("Response from  : " +
-		 * Routes.clientdetails_get_url + ":" + response.asString());
-		 * 
-		 * // Assert.assertEquals(statuscode, "200"); // Assert.assertThat(statuscode,
-		 * anyOf(is("200"), is("404")));
-		 * 
-		 * //String expectedTitles[] = {"200","400"}; // List<String> expectedTitlesList
-		 * = Arrays.asList(expectedTitles);
-		 * 
-		 * // Assert.assertTrue(expectedTitlesList.contains((statuscode)));
-		 * Assert.assertTrue(statuscode.equals("200") || statuscode.equals("404"));
-		 * 
-		 * }
-		 * 
-		 * 
-		 * @Test
-		 * 
-		 * public void test_pretransfer_post_url() { String state =
-		 * RandomCityGenerator.getRandomUSStateCode(); String city_nm =
-		 * RandomCityGenerator.getRandomUSCityByState(state); String phone_number =
-		 * RandomCityGenerator.generateRandomUSPhoneNumber();
-		 * 
-		 * String url = Routes.pretransfer_post_url; String body =
-		 * Requestpayloads.pretransfer.replace("{state}",state).replace("{city_nm}",
-		 * city_nm).replace("{phn_number}",phone_number);
-		 * 
-		 * System.out.println("url :" + url);
-		 * 
-		 * Response response = genericPost(url,body);
-		 * 
-		 * String statuscode = String.valueOf(response.getStatusCode());
-		 * System.out.println("status code : " + statuscode);
-		 * System.out.println("print payload : " + body);
-		 * 
-		 * }
-		 * 
-		 * 
-		 * 
-		 * 
-		 * @Test
-		 * 
-		 * public void test_posttransfer_post_url() { String state =
-		 * RandomCityGenerator.getRandomUSStateCode(); String city_nm =
-		 * RandomCityGenerator.getRandomUSCityByState(state); String phone_number =
-		 * RandomCityGenerator.generateRandomUSPhoneNumber();
-		 * 
-		 * String url = Routes.pretransfer_post_url; String body =
-		 * Requestpayloads.pretransfer.replace("{state}",state).replace("{city_nm}",
-		 * city_nm).replace("{phn_number}",phone_number);
-		 * 
-		 * System.out.println("url :" + url);
-		 * 
-		 * Response response = genericPost(url,body);
-		 * 
-		 * String statuscode = String.valueOf(response.getStatusCode());
-		 * System.out.println("status code : " + statuscode);
-		 * System.out.println("print payload : " + body);
-		 * 
-		 * }
-		 * 
-		 * 
-		 * @Test
-		 * 
-		 * public void test_callrealtime_post_url() { String state =
-		 * RandomCityGenerator.getRandomUSStateCode(); String city_nm =
-		 * RandomCityGenerator.getRandomUSCityByState(state); String phone_number =
-		 * RandomCityGenerator.generateRandomUSPhoneNumber();
-		 * 
-		 * String url = Routes.pretransfer_post_url; String body =
-		 * Requestpayloads.pretransfer.replace("{state}",state).replace("{city_nm}",
-		 * city_nm).replace("{phn_number}",phone_number);
-		 * 
-		 * System.out.println("url :" + url);
-		 * 
-		 * Response response = genericPost(url,body);
-		 * 
-		 * String statuscode = String.valueOf(response.getStatusCode());
-		 * System.out.println("status code : " + statuscode);
-		 * System.out.println("print payload : " + body);
-		 * 
-		 * }
-		 * 
-		 * 
-		 * @Test
-		 * 
-		 * public void test_record_post_url() { String state =
-		 * RandomCityGenerator.getRandomUSStateCode(); String city_nm =
-		 * RandomCityGenerator.getRandomUSCityByState(state); String phone_number =
-		 * RandomCityGenerator.generateRandomUSPhoneNumber();
-		 * 
-		 * String url = Routes.pretransfer_post_url; String body =
-		 * Requestpayloads.pretransfer.replace("{state}",state).replace("{city_nm}",
-		 * city_nm).replace("{phn_number}",phone_number);
-		 * 
-		 * System.out.println("url :" + url);
-		 * 
-		 * Response response = genericPost(url,body);
-		 * 
-		 * String statuscode = String.valueOf(response.getStatusCode());
-		 * System.out.println("status code : " + statuscode);
-		 * System.out.println("print payload : " + body);
-		 * 
-		 * }
-		 * 
-		 */
+	  @Test public void test_GET_userid_teamid() {
+		  int team = 5;
+		  int user = 3;
+		  String teamId = Integer.toString(team);
+		  String userId = Integer.toString(user);
+		  String result = Routes.teammanagement_get_url.replace("{team}", teamId).replace("{user}", userId);
+		  Response response = getWithOutQueryParameters(result); 
+		  String statuscode = String.valueOf(response.getStatusCode());
+		  Assert.assertEquals(statuscode, "200"); 		  
+		  
+	  }
+	  
+	  
+	  @Test public void test_GET_clientdetails() {
+		  int client = 9;
+		  String clientid = Integer.toString(client);
+		  String result = Routes.clientdetails_get_url.replace("{client}", clientid);
+		  Response response = getWithOutQueryParameters(result); 
+		  String statuscode = String.valueOf(response.getStatusCode());
+		  Assert.assertEquals(statuscode, "200"); 		  
+		  
+	  }
+	  
+	  @Test   public void test_pretransfer_post_url() { String state =
+			  RandomCityGenerator.getRandomUSStateCode(); String city_nm =
+			  RandomCityGenerator.getRandomUSCityByState(state); String phone_number =
+			  RandomCityGenerator.generateRandomUSPhoneNumber();			  
+			  String url = Routes.pretransfer_post_url; 
+			  String body = Requestpayloads.pretransfer.replace("{state}",state).replace("{city_nm}",
+			  city_nm).replace("{phn_number}",phone_number);			  
+			  Response response = genericPost(url,body);
+			  
+			  String statuscode = String.valueOf(response.getStatusCode());
+			  Assert.assertEquals(statuscode, "204");
+			  
+			  }
+	  
+	  @Test   public void test_callrealtime_post_url() { 	  
+			  String url = Routes.realtimecall_post_url; 
+			  String body = Requestpayloads.callrealtime;			  
+			  Response response = genericPost(url,body);			  
+			  String statuscode = String.valueOf(response.getStatusCode());
+			  Assert.assertEquals(statuscode, "200");
+			  
+			  }
+	  
+	  @Test   public void test_posttransfer_post_url() { 	  
+		  String url = Routes.posttransfer_post_url; 
+		  String body = Requestpayloads.posttransfer;			  
+		  Response response = genericPost(url,body);			  
+		  String statuscode = String.valueOf(response.getStatusCode());
+		  Assert.assertEquals(statuscode, "204");
+		  
+		  }
+	  
+	  @Test   public void test_postrecord_post_url() { 	  
+		  String url = Routes.datarecording_post_url; 
+		  String body = Requestpayloads.apirecord;			  
+		  Response response = genericPost(url,body);			  
+		  String statuscode = String.valueOf(response.getStatusCode());
+		  Assert.assertEquals(statuscode, "201");
+		  
+		  }
 	
+	  
+	  @Test   public void test_client_post_url() { 	  
+		  String url = Routes.client_post_url; 
+		  String body = Requestpayloads.createclient;			  
+		  Response response = genericPost(url,body);			  
+		  String statuscode = String.valueOf(response.getStatusCode());
+		  Assert.assertEquals(statuscode, "200");
+		  
+		  }
+
 }
+

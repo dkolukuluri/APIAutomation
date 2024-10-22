@@ -75,12 +75,12 @@ public class Routes {
 	//Team Management 
 	public static String teammanagement_get_url = "/api/team/{team}/user/{user}"; 
 	  
-	public static String teammanagement_post_url = "/api/team{team}/clients"; 
+	public static String teammanagement_post_url = "/api/team/{team}/clients"; 
 	
 	public static String teammanagement_delete_url = "/api/team{team}/clients{client}"; 
 	
 	//Transaction and Budget Management
-	public static String transactions_get_url = "/api/transactions";
+	public static String transactions_get_url = "/api/transactions/{transaction}";
 	
 	public static String budgets_get_url = "/api/budgets";
 	

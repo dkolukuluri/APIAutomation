@@ -1,6 +1,7 @@
 api\utilities\Apienvironment.class
 com\bmg360\apiautomation\apitest\ApiTests.class
 api\utilities\EmailSender.class
+api\utilities\ResultsParser.class
 com\bmg360\apiautomation\apiendpoints\Randomcodegenerator.class
 api\utilities\DatabaseUtils.class
 com\bmg360\apiautomation\api\BaseTest.class
@@ -10,4 +11,6 @@ com\bmg360\apiautomation\apipayload\Callrealtime.class
 api\utilities\ConfigManager.class
 com\bmg360\apiautomation\apiendpoints\Randomcodegenerator$RandomCityGenerator.class
 api\utilities\EmailSender$1.class
+api\utilities\TestresultsListener.class
+api\utilities\EditEmailableReport.class
 com\bmg360\apiautomation\apiendpoints\Routes.class

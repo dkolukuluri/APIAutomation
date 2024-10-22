@@ -8,30 +8,33 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import static org.hamcrest.Matchers.*;
 
+import java.io.IOException;
 import java.util.Map;
 
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 
-import api.utilities.Apienvironment;
 import api.utilities.ConfigManager;
+import api.utilities.*;
 import api.utilities.EmailSender;
+import api.utilities.ResultsParser;
 
+@Listeners(TestresultsListener.class)
 public class BaseTest {
 
 	protected RequestSpecification requestSpec;
 	protected ResponseSpecification responseSpec;
-	
-	Apienvironment objectapienvironment = new Apienvironment();
-	
 
 	public BaseTest() {
 		// Initialize the request specification
 		System.out.println("URL :" + ConfigManager.getApiUrl());
-		System.out.println("Auth token " + ConfigManager.getAuthtoken().substring(1, ConfigManager.getAuthtoken().length()-2));
+		System.out.println(
+				"Auth token " + ConfigManager.getAuthtoken().substring(1, ConfigManager.getAuthtoken().length() - 2));
 		requestSpec = new RequestSpecBuilder().setBaseUri(ConfigManager.getApiUrl()) // Set the base URI for the API
 				.addHeader("Content-Type", "application/json") // Common headers
-				.addHeader("Authorization", ConfigManager.getAuthtoken().substring(1, ConfigManager.getAuthtoken().length()-2)).build();
+				.addHeader("Authorization",
+						ConfigManager.getAuthtoken().substring(1, ConfigManager.getAuthtoken().length() - 2))
+				.build();
 
 		// Initialize the response specification
 		responseSpec = new ResponseSpecBuilder()
@@ -50,32 +53,30 @@ public class BaseTest {
 		return RestAssured.given().spec(requestSpec).when().get(endpoint).then().spec(responseSpec).extract()
 				.response();
 	}
-	
+
 	// Generic POST method
-	public  Response genericPost(String endpoint, String jsonPayload) { 
+	public Response genericPost(String endpoint, String jsonPayload) {
 		System.out.println("url :" + endpoint);
-		return RestAssured.given().spec(requestSpec).body(jsonPayload).when().post(endpoint).then() .extract().response();
-		}
-	
-	@BeforeSuite
-	public void setupEnvironment() {
-		String env = System.getProperty("environment", "staging");
-		System.out.println("Environment in before suite :" + env);
-
-		// Generate the environment.properties file dynamically
-		objectapienvironment.createEnvironmentFile(env);
+		return RestAssured.given().spec(requestSpec).body(jsonPayload).when().post(endpoint).then().extract()
+				.response();
 	}
-	
 
-	    @AfterSuite
-	    public void sendAllureReportViaEmail() {
-	    	System.out.println("Sending email");
-
-	        EmailSender emailSender = new EmailSender();
-	        emailSender.sendEmailWithReport(); // Call the method to send the email
-	    }
-	
+	@AfterSuite           
+	public void sendTestReport() throws IOException {
+        Map<String, String> results = TestresultsListener.testResults;
+        System.out.println("Accessing test results in @AfterSuite:");
+       StringBuilder finalString = new StringBuilder();
+       for (Map.Entry<String, String> entry : results.entrySet()) {
+            String testName = entry.getKey();
+            String testResult = entry.getValue();
+            // Append each result to the StringBuilder
+            finalString.append("<tr><td>"+testName+"</td><td>"+testResult+"</td></tr>");    
+        }
+       System.out.println("Final result " + finalString);
+       String body = EditEmailableReport.editHTMLFile("custom-report.html",finalString);
+       //String body = ResultsParser.parseAllureResults("custom-report.html");
+		//Send email with the report summary as body
+		EmailSender.sendEmail("dkolukuluri@bmg360.com", "updf lnly fabw garf",
+				"dkolukuluri@bmg360.com,rcrecco@bmg360.com,jvalencia@bmg360.com  ", "API Health Check Report - 10.22.2024", body);
 	}
-		
-
-
+}
