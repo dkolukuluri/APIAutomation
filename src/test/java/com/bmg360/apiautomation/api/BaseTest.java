@@ -77,6 +77,6 @@ public class BaseTest {
        //String body = ResultsParser.parseAllureResults("custom-report.html");
 		//Send email with the report summary as body
 		EmailSender.sendEmail("dkolukuluri@bmg360.com", "updf lnly fabw garf",
-				"dkolukuluri@bmg360.com,rcrecco@bmg360.com,jvalencia@bmg360.com  ", "API Health Check Report - 10.22.2024", body);
+				"dkolukuluri@bmg360.com,rcrecco@bmg360.com,jvalencia@bmg360.com  ", "API Health Check Report - 10.23.2024", body);
 	}
 }

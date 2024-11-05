@@ -2,68 +2,68 @@
 <testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-22T09:26:00 EDT" name="RestAssuredSuite" finished-at="2024-10-22T09:26:08 EDT" duration-ms="7528">
+  <suite started-at="2024-10-23T05:48:57 EDT" name="RestAssuredSuite" finished-at="2024-10-23T05:49:10 EDT" duration-ms="12455">
     <groups>
     </groups>
-    <test started-at="2024-10-22T09:26:00 EDT" name="ApiTests" finished-at="2024-10-22T09:26:08 EDT" duration-ms="7528">
+    <test started-at="2024-10-23T05:48:57 EDT" name="ApiTests" finished-at="2024-10-23T05:49:10 EDT" duration-ms="12455">
       <class name="com.bmg360.apiautomation.apitest.ApiTests">
-        <test-method signature="test_GET_calldetails_perday()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:00 EDT" name="test_GET_calldetails_perday" finished-at="2024-10-22T09:26:03 EDT" duration-ms="2167" status="PASS">
+        <test-method signature="test_GET_calldetails_perday()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:48:58 EDT" name="test_GET_calldetails_perday" finished-at="2024-10-23T05:49:04 EDT" duration-ms="6401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_GET_calldetails_perday -->
-        <test-method signature="test_GET_client()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:03 EDT" name="test_GET_client" finished-at="2024-10-22T09:26:03 EDT" duration-ms="402" status="PASS">
+        <test-method signature="test_GET_client()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:04 EDT" name="test_GET_client" finished-at="2024-10-23T05:49:04 EDT" duration-ms="401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_GET_client -->
-        <test-method signature="test_GET_clientdetails()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:03 EDT" name="test_GET_clientdetails" finished-at="2024-10-22T09:26:03 EDT" duration-ms="370" status="PASS">
+        <test-method signature="test_GET_clientdetails()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:04 EDT" name="test_GET_clientdetails" finished-at="2024-10-23T05:49:05 EDT" duration-ms="487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_GET_clientdetails -->
-        <test-method signature="test_GET_concurrentcallers()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:03 EDT" name="test_GET_concurrentcallers" finished-at="2024-10-22T09:26:04 EDT" duration-ms="391" status="PASS">
+        <test-method signature="test_GET_concurrentcallers()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:05 EDT" name="test_GET_concurrentcallers" finished-at="2024-10-23T05:49:05 EDT" duration-ms="421" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_GET_concurrentcallers -->
-        <test-method signature="test_GET_concurrentcalls()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:04 EDT" name="test_GET_concurrentcalls" finished-at="2024-10-22T09:26:04 EDT" duration-ms="322" status="PASS">
+        <test-method signature="test_GET_concurrentcalls()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:05 EDT" name="test_GET_concurrentcalls" finished-at="2024-10-23T05:49:06 EDT" duration-ms="349" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_GET_concurrentcalls -->
-        <test-method signature="test_GET_record()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:04 EDT" name="test_GET_record" finished-at="2024-10-22T09:26:04 EDT" duration-ms="303" status="PASS">
+        <test-method signature="test_GET_record()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:06 EDT" name="test_GET_record" finished-at="2024-10-23T05:49:06 EDT" duration-ms="307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_GET_record -->
-        <test-method signature="test_GET_transactions()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:04 EDT" name="test_GET_transactions" finished-at="2024-10-22T09:26:05 EDT" duration-ms="301" status="PASS">
+        <test-method signature="test_GET_transactions()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:06 EDT" name="test_GET_transactions" finished-at="2024-10-23T05:49:06 EDT" duration-ms="306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_GET_transactions -->
-        <test-method signature="test_GET_user()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:05 EDT" name="test_GET_user" finished-at="2024-10-22T09:26:05 EDT" duration-ms="284" status="PASS">
+        <test-method signature="test_GET_user()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:06 EDT" name="test_GET_user" finished-at="2024-10-23T05:49:07 EDT" duration-ms="318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_GET_user -->
-        <test-method signature="test_GET_userid_teamid()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:05 EDT" name="test_GET_userid_teamid" finished-at="2024-10-22T09:26:05 EDT" duration-ms="297" status="PASS">
+        <test-method signature="test_GET_userid_teamid()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:07 EDT" name="test_GET_userid_teamid" finished-at="2024-10-23T05:49:07 EDT" duration-ms="369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_GET_userid_teamid -->
-        <test-method signature="test_callrealtime_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:05 EDT" name="test_callrealtime_post_url" finished-at="2024-10-22T09:26:06 EDT" duration-ms="478" status="PASS">
+        <test-method signature="test_callrealtime_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:07 EDT" name="test_callrealtime_post_url" finished-at="2024-10-23T05:49:08 EDT" duration-ms="555" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_callrealtime_post_url -->
-        <test-method signature="test_client_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:06 EDT" name="test_client_post_url" finished-at="2024-10-22T09:26:07 EDT" duration-ms="1125" status="PASS">
+        <test-method signature="test_client_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:08 EDT" name="test_client_post_url" finished-at="2024-10-23T05:49:09 EDT" duration-ms="1091" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_client_post_url -->
-        <test-method signature="test_postrecord_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:07 EDT" name="test_postrecord_post_url" finished-at="2024-10-22T09:26:07 EDT" duration-ms="320" status="PASS">
+        <test-method signature="test_postrecord_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:09 EDT" name="test_postrecord_post_url" finished-at="2024-10-23T05:49:09 EDT" duration-ms="325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_postrecord_post_url -->
-        <test-method signature="test_posttransfer_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:07 EDT" name="test_posttransfer_post_url" finished-at="2024-10-22T09:26:08 EDT" duration-ms="297" status="PASS">
+        <test-method signature="test_posttransfer_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:09 EDT" name="test_posttransfer_post_url" finished-at="2024-10-23T05:49:09 EDT" duration-ms="312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_posttransfer_post_url -->
-        <test-method signature="test_pretransfer_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:08 EDT" name="test_pretransfer_post_url" finished-at="2024-10-22T09:26:08 EDT" duration-ms="304" status="PASS">
+        <test-method signature="test_pretransfer_post_url()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:09 EDT" name="test_pretransfer_post_url" finished-at="2024-10-23T05:49:10 EDT" duration-ms="333" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_pretransfer_post_url -->
-        <test-method is-config="true" signature="sendTestReport()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@4163f1cd]" started-at="2024-10-22T09:26:08 EDT" name="sendTestReport" finished-at="2024-10-22T09:26:09 EDT" duration-ms="1408" status="PASS">
+        <test-method is-config="true" signature="sendTestReport()[pri:0, instance:com.bmg360.apiautomation.apitest.ApiTests@5fa05212]" started-at="2024-10-23T05:49:10 EDT" name="sendTestReport" finished-at="2024-10-23T05:49:13 EDT" duration-ms="2997" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendTestReport -->

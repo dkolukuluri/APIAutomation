@@ -1,0 +1,1 @@
+{"uuid":"a5791ad9-242c-4c14-987a-a9283c5451bd","name":"RestAssuredSuite","children":["dcb83d6b-0015-40ab-8944-d487f6565f2d"],"befores":[],"afters":[{"name":"sendTestReport","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1729676950416,"stop":1729676953398}],"start":1729676937785,"stop":1729676953400}
